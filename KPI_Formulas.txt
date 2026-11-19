@@ -1,0 +1,33 @@
+KPI 1: Total Revenue
+
+Total Revenue = SUM(Sheet1[Total_Sales])
+
+
+KPI 2: Total Orders
+
+Total Orders = DISTINCTCOUNT(Sheet1[Order_ID])
+
+
+KPI 3: Unique Customers
+
+Unique Customers = DISTINCTCOUNT(Sheet1[Customer_ID])
+
+
+KPI 4: Average Order Value
+
+Average Order Value =
+DIVIDE(
+    SUM(Sheet1[Total_Sales]),
+    DISTINCTCOUNT(Sheet1[Order_ID]),
+    0
+)
+
+
+KPI 5: Revenue per Customer
+
+Revenue per Customer =
+DIVIDE(
+    SUM(Sheet1[Total_Sales]),
+    DISTINCTCOUNT(Sheet1[Customer_ID]),
+    0
+)
